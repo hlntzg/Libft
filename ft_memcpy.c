@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:31:23 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/18 09:24:56 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/18 16:31:23 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/19 10:15:54 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	sign;
-	int	result;
+#include "libft.h"
 
-	i = 0;
-	sign = 1;
-	result = 0;
-	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
-		result *= 10;
-		result += str[i] - '0';
-		i++;
-	}
-	return (result * sign);
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char		*tmp_dst;
+	const unsigned char	*tmp_src;
+
+	if (!dst && !src)
+		return (dst);
+	tmp_dst = (unsigned char *)dst;
+	tmp_src = (unsigned char *)src;
+	while (n--)
+		*(tmp_dst++) = *(tmp_src++);
+	return (dst);
 }
