@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 15:39:37 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/22 14:43:13 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/22 18:42:07 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/22 20:07:20 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	counter;
+	unsigned char	*str;
+	unsigned char	convert_c;
+	size_t			i;
 
-	counter = 0;
-	while (s[counter])
-		counter++;
-	return (counter);
+	str = (unsigned char *)s;
+	convert_c = (unsigned char)c;
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == convert_c)
+			return ((void *)&str[i]);
+		i++;
+	}
+	return (0);
 }

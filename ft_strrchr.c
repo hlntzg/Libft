@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 15:39:37 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/22 14:43:13 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/22 17:27:12 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/22 18:39:34 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	counter;
+	char	convert_c;
+	char	*res;
 
-	counter = 0;
-	while (s[counter])
-		counter++;
-	return (counter);
+	convert_c = (char)c;
+	res = 0;
+	while (*s != '\0')
+	{
+		if (*s == c)
+			res = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		res = (char *)s;
+	return ((char *) res);
 }
