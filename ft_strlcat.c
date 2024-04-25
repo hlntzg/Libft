@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:49:36 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/22 16:18:53 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/25 18:59:40 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	i = 0;
-	if (dst_len >= dstsize)
+	if (dst_len > dstsize || dstsize == 0)
 		return (dstsize + src_len);
 	while (src[i] != '\0' && (dst_len + i < dstsize - 1))
 	{
 		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[dstsize - 1] = '\0';
+	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }

@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 09:54:47 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 19:01:14 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/23 11:36:32 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/25 15:43:58 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	src_len;
+	size_t	i;
+	size_t	j;
 
-	src_len = 0;
-	if (dstsize == 0)
+	i = 0;
+	j = 0;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (*haystack && i < len)
 	{
-		return (ft_strlen(src));
+		while (haystack[i + j] == needle[j] && haystack[i + j] && i + j < len)
+		{
+			j++;
+			if (needle[j] == 0)
+				return ((char *)haystack + i);
+		}
+		j = 0;
+		i++;
 	}
-	while (*(src + src_len) && (dstsize - 1))
-	{
-		*dst = *(src + src_len);
-		dst++;
-		src_len++;
-		dstsize--;
-	}
-	*dst = '\0';
-	while (*(src + src_len))
-		src_len++;
-	return (src_len);
+	return (0);
 }

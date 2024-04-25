@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 09:54:47 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 19:01:14 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/23 14:24:51 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/24 17:19:03 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s1)
 {
-	size_t	src_len;
+	char	*str_copy;
+	int		i;
 
-	src_len = 0;
-	if (dstsize == 0)
+	str_copy = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!str_copy)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		return (ft_strlen(src));
+		str_copy[i] = s1[i];
+		i++;
 	}
-	while (*(src + src_len) && (dstsize - 1))
-	{
-		*dst = *(src + src_len);
-		dst++;
-		src_len++;
-		dstsize--;
-	}
-	*dst = '\0';
-	while (*(src + src_len))
-		src_len++;
-	return (src_len);
+	str_copy[i] = '\0';
+	return (str_copy);
 }

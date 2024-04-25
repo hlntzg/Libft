@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 09:54:47 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 19:01:14 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/24 12:23:06 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/25 19:02:48 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	src_len;
+	char	*trim;
+	int		a;
+	int		z;
 
-	src_len = 0;
-	if (dstsize == 0)
-	{
-		return (ft_strlen(src));
-	}
-	while (*(src + src_len) && (dstsize - 1))
-	{
-		*dst = *(src + src_len);
-		dst++;
-		src_len++;
-		dstsize--;
-	}
-	*dst = '\0';
-	while (*(src + src_len))
-		src_len++;
-	return (src_len);
+	a = 0;
+	z = ft_strlen(s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
+	while (a <= z && ft_strchr(set, s1[a]))
+		a++;
+	if (a > z)
+		return (ft_strdup(s1 + z + 1));
+	while (z >= 0 && ft_strchr(set, s1[z]))
+		z--;
+	trim = ft_substr(s1, a, (z - a + 1));
+	return (trim);
 }

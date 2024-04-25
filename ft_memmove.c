@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:16:28 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/19 18:56:21 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/25 18:50:17 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*tmp_dst;
 
 	tmp_src = (char *)src;
-	tmp_dst = dst;
+	tmp_dst = (char *)dst;
+	if (!dst && !src)
+		return (NULL);
 	if (tmp_dst > tmp_src)
 		while (len--)
 			tmp_dst[len] = tmp_src[len];
