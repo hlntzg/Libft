@@ -6,7 +6,7 @@
 #    By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/23 16:51:18 by hutzig            #+#    #+#              #
-#    Updated: 2024/04/25 19:40:38 by hutzig           ###   ########.fr        #
+#    Updated: 2024/04/26 18:25:55 by hutzig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,9 @@ SOURCES = ft_atoi.c \
 		  ft_memset.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
+		  ft_putendl_fd.c \
+		  ft_putnbr_fd.c \
+		  ft_split.c \
 		  ft_strchr.c \
 		  ft_strdup.c \
 		  ft_strjoin.c \
