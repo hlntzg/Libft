@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:31:33 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 15:35:44 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/28 18:34:34 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
 	{
-		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+		if ((unsigned char) s1[i] != (unsigned char) s2[i])
 		{
-			return ((unsigned char)s1[i] - s2[i]);
+			return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 		}
 		i++;
 	}

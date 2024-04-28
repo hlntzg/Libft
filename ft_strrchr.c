@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:27:12 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/22 18:39:34 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/28 18:31:42 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	res = 0;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == convert_c)
 			res = (char *)s;
 		s++;
 	}
-	if (c == '\0')
+	if (convert_c == '\0')
 		res = (char *)s;
 	return ((char *) res);
 }

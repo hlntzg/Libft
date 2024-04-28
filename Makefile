@@ -6,7 +6,7 @@
 #    By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/23 16:51:18 by hutzig            #+#    #+#              #
-#    Updated: 2024/04/26 18:25:55 by hutzig           ###   ########.fr        #
+#    Updated: 2024/04/28 18:23:09 by hutzig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SOURCES = ft_atoi.c \
 		  ft_isascii.c \
 		  ft_isdigit.c \
 		  ft_isprint.c \
+		  ft_itoa.c \
 		  ft_memchr.c \
 		  ft_memcmp.c \
 		  ft_memcpy.c \
@@ -32,14 +33,17 @@ SOURCES = ft_atoi.c \
 		  ft_split.c \
 		  ft_strchr.c \
 		  ft_strdup.c \
+		  ft_striteri.c \
 		  ft_strjoin.c \
 		  ft_strlcat.c \
 		  ft_strlcpy.c \
 		  ft_strlen.c \
+		  ft_strmapi.c \
 		  ft_strncmp.c \
 		  ft_strnstr.c \
 		  ft_strrchr.c \
 		  ft_strtrim.c \
+		  ft_striteri.c \
 		  ft_substr.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
