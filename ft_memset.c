@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:51:21 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/18 15:17:53 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/29 09:06:04 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	tmp_ptr = b;
 	while (len--)
 	{
-		*tmp_ptr = (unsigned char)c;
+		*tmp_ptr = (unsigned char) c;
 		tmp_ptr++;
 	}
 	return (b);

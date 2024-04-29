@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:24:36 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/28 16:27:08 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/29 09:11:13 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
-	result = malloc(sizeof(char *) * strs_count(s, c) + 1);
+	result = malloc(sizeof(char *) * (strs_count(s, c) + 1));
 	if (!result || !s)
 		return (NULL);
 	i = 0;
@@ -82,25 +82,3 @@ char	**ft_split(char const *s, char c)
 	result[j] = 0;
 	return (result);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s;
-	char	c;
-	char	**split;
-	int		i;
-
-	i = 0;
-	s = "__hello_hi_bye__World__Kavini__";
-	c = '_';
-	printf("%s\n", s);
-	split = ft_split(s, c);
-	while (split[i])
-	{
-		printf("\n%s", split[i]);
-		i++;
-	}
-	return (0);
-}*/
