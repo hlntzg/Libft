@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:31:23 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/29 10:31:05 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/04/29 14:15:16 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,4 @@ int	ft_atoi(const char *str)
 			return (0);
 	}
 	return ((int)(result * sign));
-}
-
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    char *s = "2489920432036854775807111111111111";
-    char *str;
-
-    int i = 2;
-    while (i < 40)
-    {
-        str = malloc(i + 1);
-        memcpy(str, s, i);
-        str[i] = 0;
-        printf("%s\n", str);
-        printf("%i\n", atoi(str));
-        printf("%i\n\n", ft_atoi(str));
-        free(str);
-        i++;
-    }
 }
