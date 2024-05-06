@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:39:59 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/03 16:55:46 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 15:27:20 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,6 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (counter);
 }
+/* The function returns the list lenght if it's not empty. tmp_lst->next 
+ * accesses the next pointer of the current node, which points to the next 
+ * node in the list, so this line updates tmp_lst to point to the next node. */

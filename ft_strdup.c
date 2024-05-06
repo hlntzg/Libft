@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:24:51 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/24 17:19:03 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 11:59:43 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,5 @@ char	*ft_strdup(const char *s1)
 	str_copy[i] = '\0';
 	return (str_copy);
 }
+/* The function does a copy of s1 after (and if) allocates sufficient
+ * memory for it and returns a pointer or NULL if malloc fails. */

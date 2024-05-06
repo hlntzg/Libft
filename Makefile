@@ -6,12 +6,14 @@
 #    By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/23 16:51:18 by hutzig            #+#    #+#              #
-#    Updated: 2024/05/03 20:18:16 by hutzig           ###   ########.fr        #
+#    Updated: 2024/05/06 17:00:48 by hutzig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# Variable NAME specifies the name of the output file;
 NAME = libft.a
 
+# Variable SOURCES contains .c files to be compiled to object files;
 SOURCES = ft_atoi.c \
 		  ft_bzero.c \
 		  ft_calloc.c \
@@ -48,6 +50,7 @@ SOURCES = ft_atoi.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
 
+# Variable to additional source files to be compiled separately;
 BONUS_S = ft_lstnew_bonus.c \
 		  ft_lstadd_front_bonus.c \
 		  ft_lstsize_bonus.c \
@@ -58,37 +61,57 @@ BONUS_S = ft_lstnew_bonus.c \
 		  ft_lstiter_bonus.c \
 		  ft_lstmap_bonus.c \
 
+# Variable OBJECTS stores the names of the object files generated from the source; 
 OBJECTS = $(SOURCES:.c=.o)
 
+# Variable BONUS_O stores the names of .o files generated from bonus sources;
 BONUS_O = $(BONUS_S:.c=.o)
 
+# Specifies the required header file for compilation;
 HEADER = libft.h
 
+# Variable to specify the compiler command - usually to the default C compiler on the system;
 CC = cc
 
+# Compiler flags to enable compiler warnings (treat them as errors);
 CFLAGS = -Wall -Wextra -Werror
 
+# Command for removing files;
 RM = rm -f
 
+# Command to create a new archivie from .o files (or replace/create/sort);
 AR = ar rcs
 
+# Default rule to build the '$(NAME)' target;
 all: $(NAME)
 
+# Rule to compile .c (speficied by '$<') into .o files (named specified by -o $@) without linking (-c);
 %.o:%.c $(HEADER)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+# Rule to build the final library archive file;
 $(NAME): $(OBJECTS)
 	$(AR) $(NAME) $(OBJECTS)
 
-bonus: $(NAME) $(BONUS_O)
+# Rule to build the bonus functions and add them to the library;
+bonus: .bonus
+	
+.bonus: $(NAME) $(BONUS_O)
 	$(AR) $(NAME) $(BONUS_O)
+	@touch .bonus
 
+# Rule that removes all object files and bonus object files;
 clean:
 	$(RM) $(OBJECTS) $(BONUS_O)
+	@$(RM) .bonus
 
+# Target that also removes the executable;
 fclean: clean
 	$(RM) $(NAME)
+	@$(RM) .bonus
 
+# Target that cleans and rebuilds ('all') the project;
 re:	fclean all
 
+# .PHONY specifies targets that aren't files, preventing conflicts with files of the same name;
 .PHONY: all clean fclean re bonus

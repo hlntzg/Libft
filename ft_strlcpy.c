@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:54:47 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 19:01:14 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 10:16:08 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		src_len++;
 	return (src_len);
 }
+/* The function returns the len of src, even if the copy has been truncate.
+ * Strlcpy copies (dstsize - 1 lenght of) src to dst, NUL-terminating the
+ * string if dstsize is not 0. */

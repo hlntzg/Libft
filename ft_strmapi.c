@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:40:57 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/28 18:14:58 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 14:04:34 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_string[i] = '\0';
 	return (new_string);
 }
+/* The function iterates through all the string and applies the function
+ * to every character of it and returns the new string or NULL. */

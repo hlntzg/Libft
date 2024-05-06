@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:51:21 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/29 09:06:04 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 13:11:29 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+/* As the return value is the first parameter of the function,
+ * the use of a temporary variable is necessary (*tmp_ptr) to  write len bytes
+ * of value c (converted to an unsigned char) to the string b. */

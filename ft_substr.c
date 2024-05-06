@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 11:08:57 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/24 17:50:08 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 12:05:07 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+/* The function returns a pointer to the substring at the start index
+ * with maxinum size of len or NULL if malloc fails. */

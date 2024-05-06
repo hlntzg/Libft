@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:31:33 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/28 18:34:34 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 10:35:21 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/* The function compares n characters in both strings until the '\0'. */

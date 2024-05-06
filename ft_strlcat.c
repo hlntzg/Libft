@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:49:36 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 18:59:40 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 10:19:04 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+/* The function concatenates src into dst and always NUL-terminate the
+ * string and returns the length of dst plus src. */

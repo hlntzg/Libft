@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:23:06 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/25 19:02:48 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 12:56:29 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim = ft_substr(s1, a, (z - a + 1));
 	return (trim);
 }
+/* The function removes any chacacter of set only from the start and
+ * end of s2 and returns a new string. It iterates through the start of
+ * s1 until it finds a character that is not in the set and next does
+ * the same from back to front, decrementing z. */

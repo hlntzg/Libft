@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 19:26:29 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/28 17:03:53 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 13:07:04 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,7 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	return (str);
 }
+/* Itoa function convertes a number into a string after allocating enough
+ * memory for the string (ensuring the NUL-terminating chacacter in the end).
+ * It's necessary to convert the n parameter to a long so it's to work with
+ * INT_MIN and INT_MAX the same way as all the other numbers. */

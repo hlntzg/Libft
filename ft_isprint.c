@@ -6,13 +6,13 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:29:08 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/17 15:39:31 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 09:29:11 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (c);
+		return (1);
 	return (0);
 }

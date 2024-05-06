@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:36:32 by hutzig            #+#    #+#             */
-/*   Updated: 2024/04/29 10:14:13 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 10:55:15 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+/* The function searches (max len characters of the string) for a complete
+ * substring. Returns values are NULL or a pointer to the first occurence
+ * of substring on the string (or the string if substring is empty. */

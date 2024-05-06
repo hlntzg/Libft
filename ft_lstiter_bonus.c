@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:07:30 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/04 20:27:43 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 16:06:21 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		tmp = tmp->next;
 	}
 }
+/* The function iterates over the whole list and applies the function f to
+ * the content of each elements. */

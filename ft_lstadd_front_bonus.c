@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:09:27 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/03 14:03:29 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/06 15:23:50 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
+/* Set next (pointer to the nex node) to point to the first element of *lst and
+ * than dereference the double pointer (change the value to point to new). */
