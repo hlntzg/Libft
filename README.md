@@ -30,8 +30,12 @@ Build the library:
 ```
 make
 ```
-This will generate `libft.a`.
+This will generate `libft.a`. 
 
+To check which object (.o) files are inside `libft.a`:
+```
+ar -t libft.a
+```
 To clean object files:
 ```
 make clean
